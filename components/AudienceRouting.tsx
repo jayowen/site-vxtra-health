@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AudienceRouting() {
   return (
@@ -14,7 +15,7 @@ export default function AudienceRouting() {
         </div>
 
         <div className="audience-grid">
-          <div className="audience-card emphasized reveal">
+          <Link href="/employees" className="audience-card emphasized reveal">
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
@@ -37,9 +38,10 @@ export default function AudienceRouting() {
                 insurance runaround. Call your doctor, get seen, get care
                 &mdash; no dreading the bill.
               </p>
+              <span className="audience-card-link">Learn More &rarr;</span>
             </div>
-          </div>
-          <div className="audience-card reveal">
+          </Link>
+          <Link href="/physicians" className="audience-card reveal">
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
@@ -61,9 +63,10 @@ export default function AudienceRouting() {
                 by technology that handles claims and data. Your patients trust you &mdash;
                 not a call center.
               </p>
+              <span className="audience-card-link">Learn More &rarr;</span>
             </div>
-          </div>
-          <div className="audience-card reveal">
+          </Link>
+          <Link href="/employers" className="audience-card reveal">
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
@@ -86,9 +89,10 @@ export default function AudienceRouting() {
                 costs you can actually control. Better care for your people, hundreds less
                 per employee per month.
               </p>
+              <span className="audience-card-link">Learn More &rarr;</span>
             </div>
-          </div>
-          <div className="audience-card reveal">
+          </Link>
+          <Link href="/brokers" className="audience-card reveal">
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
@@ -113,8 +117,9 @@ export default function AudienceRouting() {
                 physician. Your clients save real money and your book of business is
                 protected.
               </p>
+              <span className="audience-card-link">Learn More &rarr;</span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

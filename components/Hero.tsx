@@ -6,19 +6,39 @@ import Image from "next/image";
 export default function Hero() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
     const slides = carousel.querySelectorAll<HTMLElement>("[data-slide]");
     let current = 0;
 
-    const interval = setInterval(() => {
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
-    }, 4000);
+    const start = () => {
+      intervalRef.current = setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 4000);
+    };
 
-    return () => clearInterval(interval);
+    start();
+
+    const pause = () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+    const resume = () => { pause(); start(); };
+
+    carousel.addEventListener("mouseenter", pause);
+    carousel.addEventListener("mouseleave", resume);
+    carousel.addEventListener("focusin", pause);
+    carousel.addEventListener("focusout", resume);
+
+    return () => {
+      pause();
+      carousel.removeEventListener("mouseenter", pause);
+      carousel.removeEventListener("mouseleave", resume);
+      carousel.removeEventListener("focusin", pause);
+      carousel.removeEventListener("focusout", resume);
+    };
   }, []);
 
   const scrollTo = (id: string) => {
@@ -108,7 +128,7 @@ export default function Hero() {
             </div>
             <div className="proof-text">
               <span className="proof-value">30+ Years</span>
-              <span className="proof-label">Healthcare Operations Experience</span>
+              <span className="proof-label">Physician-Steward Experience</span>
             </div>
           </div>
           <div className="proof-item">

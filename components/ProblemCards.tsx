@@ -24,10 +24,10 @@ export default function ProblemCards() {
               </svg>
             </div>
             <div className="problem-card-type">For Employees</div>
-            <h3>High costs force people to skip care</h3>
+            <h3>Healthcare is confusing and way too expensive</h3>
             <p>
-              Confusing plans and surprise bills mean employees avoid the doctor &mdash;
-              until small problems become costly emergencies.
+              Nobody should dread going to the doctor because they&rsquo;re afraid of what
+              it&rsquo;ll cost. Small problems become expensive emergencies when people avoid care.
             </p>
           </div>
           <div className="problem-card reveal">
@@ -37,10 +37,10 @@ export default function ProblemCards() {
               </svg>
             </div>
             <div className="problem-card-type">For Physicians</div>
-            <h3>Insurance bureaucracy overrides clinical judgment</h3>
+            <h3>Insurance companies have stripped physicians of their agency</h3>
             <p>
-              Pre-authorizations and administrative overhead stand between doctors and
-              the patients who need them.
+              Pre-authorizations, denials, and administrative overhead stand between
+              doctors and their patients. Physicians should practice medicine, not fight paperwork.
             </p>
           </div>
           <div className="problem-card reveal">
@@ -52,10 +52,11 @@ export default function ProblemCards() {
               </svg>
             </div>
             <div className="problem-card-type">For Employers</div>
-            <h3>Premiums rise every year &mdash; and the value keeps shrinking</h3>
+            <h3>Most self-insured employers pay more every year for plans designed for insurance company profits</h3>
             <p>
-              7&ndash;10% annual increases. Your spend doubles in a decade &mdash; while
-              new federal mandates add regulatory exposure.
+              Premiums rise 7&ndash;10% every year. At that rate, your healthcare spend
+              doubles in a decade, and you&rsquo;re still getting the same legacy experience.
+              New transparency mandates add regulatory risk on top of rising costs.
             </p>
           </div>
           <div className="problem-card reveal">
@@ -68,10 +69,10 @@ export default function ProblemCards() {
               </svg>
             </div>
             <div className="problem-card-type">For Brokers</div>
-            <h3>Everyone is selling the same commodity plans</h3>
+            <h3>It&rsquo;s hard to stand out when every broker is selling the same plans</h3>
             <p>
-              60% of brokers are PE-owned and won&rsquo;t innovate. Independent brokers need
-              a product that actually differentiates.
+              60% of brokers are now owned by private equity that won&rsquo;t innovate.
+              Independent brokers need a product the competition can&rsquo;t match.
             </p>
           </div>
         </div>

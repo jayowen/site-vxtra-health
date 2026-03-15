@@ -8,12 +8,9 @@ import SuccessCards from "@/components/SuccessCards";
 import StakesRisks from "@/components/StakesRisks";
 import AudienceRouting from "@/components/AudienceRouting";
 import FinalCTA from "@/components/FinalCTA";
-import ScrollReveal from "@/components/ScrollReveal";
-
 export default function Home() {
   return (
     <main>
-      <ScrollReveal />
       <Hero />
       <ProblemCards />
       <GuideAuthority />

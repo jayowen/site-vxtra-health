@@ -3,7 +3,7 @@ export default function GuideAuthority() {
     <section className="section guide" id="our-story" aria-label="Our story and authority">
       <div className="container">
         <div className="reveal">
-          <span className="section-label">Built by People Who&rsquo;ve Lived It</span>
+          <span className="section-label">30+ Years on Every Side of Healthcare</span>
           <h2 className="section-title">We&rsquo;ve been on every side of this table.</h2>
         </div>
 
@@ -24,7 +24,8 @@ export default function GuideAuthority() {
           <div>
             <blockquote>
               &ldquo;We know what renewal season feels like. We know the frustration of
-              watching insurance companies extract value while delivering less.&rdquo;
+              watching insurance companies extract value while delivering less.
+              We&rsquo;ve lived it.&rdquo;
             </blockquote>
             <cite>Larry Hightower, Co-Founder &amp; CEO</cite>
           </div>

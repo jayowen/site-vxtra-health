@@ -98,6 +98,29 @@ export default function OurTownModel() {
             <strong>Together, you&rsquo;re better.</strong>
           </p>
         </div>
+
+        <div className="our-town-pillars reveal">
+          <div className="our-town-pillar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+            <span>Plan Design</span>
+          </div>
+          <div className="our-town-pillar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+            <span>Pharmacy</span>
+          </div>
+          <div className="our-town-pillar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" /></svg>
+            <span>Medical</span>
+          </div>
+          <div className="our-town-pillar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+            <span>Reinsurance</span>
+          </div>
+          <div className="our-town-pillar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>
+            <span>Member Orchestration</span>
+          </div>
+        </div>
       </div>
       <div className="section-divider">
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">

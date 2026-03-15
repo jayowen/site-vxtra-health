@@ -29,7 +29,7 @@ export default function FinalCTA() {
               href="mailto:info@vxtrahealth.com?subject=Request%20Plan%20Overview%20-%20Vxtra%20Health"
               className="btn btn-white-outline btn-lg"
             >
-              Request Our Overview
+              Download Our Overview
             </a>
           </div>
           <p className="final-cta-email">

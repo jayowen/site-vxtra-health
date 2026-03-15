@@ -3,6 +3,7 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const dmSerif = DM_Serif_Display({
   weight: "400",
@@ -144,6 +145,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ScrollReveal />
         <Nav />
         {children}
         <Footer />

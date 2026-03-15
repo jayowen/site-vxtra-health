@@ -16,7 +16,7 @@ export default function ScrollReveal() {
               const delay = idx >= 0 ? idx * 150 : 0;
               setTimeout(() => {
                 entry.target.classList.add("visible");
-              }, Math.min(delay, 600));
+              }, Math.min(delay, 900));
             } else {
               entry.target.classList.add("visible");
             }
