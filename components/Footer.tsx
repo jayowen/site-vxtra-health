@@ -12,7 +12,6 @@ export default function Footer() {
               width={120}
               height={32}
               className="footer-logo-img"
-              style={{ height: "32px", width: "auto" }}
             />
             <p className="footer-tagline">
               Physician-steward health plans for self-insured employers. Now

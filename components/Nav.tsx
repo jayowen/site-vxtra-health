@@ -38,7 +38,6 @@ export default function Nav() {
               height={72}
               priority
               className="nav-logo-img"
-              style={{ height: "72px", width: "auto" }}
             />
           </a>
           <ul className="nav-links">
