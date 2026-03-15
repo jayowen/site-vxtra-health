@@ -2,15 +2,15 @@ export default function StakesRisks() {
   const risks = [
     {
       title: "Premiums will keep rising",
-      desc: "At 7%+ annually, your spend doubles in a decade. The math doesn\u2019t get friendlier.",
+      desc: "At 7%+ annually, your health plan spend doubles in a decade. The math doesn\u2019t get friendlier.",
     },
     {
       title: "Your best people will leave",
-      desc: "68% of employees say benefits are a top factor in staying. Subpar coverage drives talent to competitors.",
+      desc: "68% of employees say benefits are a top factor in staying. Subpar coverage drives talent to competitors who offer more.",
     },
     {
-      title: "Care quality will decline",
-      desc: "When people avoid care, small problems become expensive emergencies.",
+      title: "Avoided care becomes expensive care",
+      desc: "When employees skip the doctor, small problems become ER visits. You pay more \u2014 and your people suffer more.",
     },
     {
       title: "New mandates create real liability",
@@ -19,9 +19,9 @@ export default function StakesRisks() {
   ];
 
   return (
-    <section className="section failure">
+    <section className="section failure" aria-label="The cost of inaction">
       <div className="container">
-        <div className="reveal" style={{ textAlign: "center" }}>
+        <div className="reveal text-center">
           <span className="section-label">The Cost of Waiting</span>
           <h2 className="section-title">The cost of doing nothing keeps going up.</h2>
         </div>
@@ -40,7 +40,7 @@ export default function StakesRisks() {
 
         <p className="failure-closing reveal">
           Every year of inaction is another year of 1,600% stock appreciation for insurance
-          companies, funded by your premiums.
+          companies &mdash; funded by your premiums.
         </p>
       </div>
     </section>

@@ -12,7 +12,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <ScrollReveal />
       <Hero />
       <ProblemCards />
@@ -24,6 +24,6 @@ export default function Home() {
       <StakesRisks />
       <AudienceRouting />
       <FinalCTA />
-    </>
+    </main>
   );
 }

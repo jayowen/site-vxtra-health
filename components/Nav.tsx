@@ -28,15 +28,16 @@ export default function Nav() {
 
   return (
     <>
-      <nav className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
+      <nav className={`nav${scrolled ? " scrolled" : ""}`} id="nav" aria-label="Main navigation">
         <div className="nav-inner">
-          <a href="#" className="nav-logo">
+          <a href="#" className="nav-logo" aria-label="Vxtra Health home">
             <Image
               src="/vxtrahealth-logo.png"
-              alt="Vxtra Health"
+              alt="Vxtra Health logo"
               width={180}
               height={72}
               priority
+              className="nav-logo-img"
               style={{ height: "72px", width: "auto" }}
             />
           </a>
@@ -60,7 +61,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      <div className={`mobile-menu${mobileOpen ? " open" : ""}`}>
+      <div className={`mobile-menu${mobileOpen ? " open" : ""}`} role="dialog" aria-label="Mobile navigation menu">
         <a href="#how-it-works" onClick={() => scrollTo("how-it-works")}>How It Works</a>
         <a href="#our-town-model" onClick={() => scrollTo("our-town-model")}>Our Town</a>
         <a href="#who-we-help" onClick={() => scrollTo("who-we-help")}>Who We Help</a>

@@ -186,6 +186,14 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
+.section-subtitle-centered {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* ─── Scroll Reveal ─── */
 .reveal {
   opacity: 0;
@@ -227,7 +235,8 @@ a { text-decoration: none; color: inherit; }
   padding: 0 24px;
 }
 
-.nav-logo img {
+.nav-logo img,
+.nav-logo-img {
   height: 72px;
   width: auto;
 }
@@ -449,6 +458,19 @@ a { text-decoration: none; color: inherit; }
   max-width: 540px;
 }
 
+.hero-urgency {
+  font-size: 14px;
+  color: var(--coral);
+  font-weight: 600;
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+
+.hero-btn-outline {
+  border-color: rgba(34,186,180,0.6);
+  color: var(--teal);
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
@@ -608,17 +630,20 @@ a { text-decoration: none; color: inherit; }
   animation: morphPhoto 10s ease-in-out infinite alternate;
 }
 
-.hero-carousel img {
+.hero-slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
 }
 
-.hero-carousel img.active {
+.hero-slide img {
+  object-fit: cover;
+}
+
+.hero-slide.active {
   opacity: 1;
 }
 
@@ -691,6 +716,10 @@ a { text-decoration: none; color: inherit; }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-top: 56px;
+}
+
+.problem-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .problem-card {
@@ -1050,6 +1079,14 @@ a { text-decoration: none; color: inherit; }
 
 .our-town .section-subtitle {
   color: rgba(255,255,255,0.6);
+}
+
+.our-town-launch-note {
+  font-size: 15px;
+  color: var(--teal);
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
 }
 
 /* Orbital Hub & Spoke Layout */
@@ -1753,11 +1790,26 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 20px;
 }
 
+.final-cta-label {
+  color: rgba(255,255,255,0.7);
+}
+
 .final-cta-sub {
   font-size: 18px;
   color: rgba(255,255,255,0.8);
   margin-bottom: 40px;
   line-height: 1.7;
+}
+
+.final-cta-email {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 20px;
+}
+
+.final-cta-email-link {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .final-cta-actions {
@@ -1825,10 +1877,12 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 56px;
 }
 
-.footer-brand img {
+.footer-brand img,
+.footer-logo-img {
   height: 32px;
   margin-bottom: 16px;
   filter: brightness(0) invert(1);
+  width: auto;
 }
 
 .footer-tagline {
@@ -1922,6 +1976,7 @@ a { text-decoration: none; color: inherit; }
   .hero h1 { font-size: clamp(32px, 5vw, 48px); }
 
   .problem-grid,
+  .problem-grid-4,
   .failure-risks {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px;
@@ -1980,6 +2035,7 @@ a { text-decoration: none; color: inherit; }
   .audience-grid { grid-template-columns: 1fr; }
 
   .problem-grid,
+  .problem-grid-4,
   .failure-risks {
     grid-template-columns: 1fr !important;
   }

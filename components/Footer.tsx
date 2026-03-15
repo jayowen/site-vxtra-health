@@ -2,19 +2,20 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
             <Image
               src="/vxtrahealth-logo.png"
-              alt="Vxtra Health"
+              alt="Vxtra Health logo"
               width={120}
               height={32}
-              style={{ height: "32px", width: "auto", filter: "brightness(0) invert(1)" }}
+              className="footer-logo-img"
+              style={{ height: "32px", width: "auto" }}
             />
             <p className="footer-tagline">
-              Physician-steward health plans for self-insured middle market employers. Now
+              Physician-steward health plans for self-insured employers. Now
               launching in Augusta &amp; Gainesville, GA.
             </p>
             <p className="footer-address">
