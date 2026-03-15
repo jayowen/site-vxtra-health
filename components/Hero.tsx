@@ -73,7 +73,7 @@ export default function Hero() {
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
                   alt="Self-insured employer executive reviewing health plan cost data at their desk"
                   fill
-                  sizes="(max-width: 1024px) 0px, 520px"
+                  sizes="(max-width: 1024px) 100vw, 520px"
                   priority
                 />
               </div>
@@ -82,7 +82,7 @@ export default function Hero() {
                   src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
                   alt="Local physician steward providing direct patient care without insurance barriers"
                   fill
-                  sizes="(max-width: 1024px) 0px, 520px"
+                  sizes="(max-width: 1024px) 100vw, 520px"
                 />
               </div>
               <div data-slide className="hero-slide">
@@ -90,7 +90,7 @@ export default function Hero() {
                   src="https://images.unsplash.com/photo-1753354868616-544973e405c9?w=800&q=80"
                   alt="Employees collaborating in a workplace with affordable health benefits"
                   fill
-                  sizes="(max-width: 1024px) 0px, 520px"
+                  sizes="(max-width: 1024px) 100vw, 520px"
                 />
               </div>
             </div>
