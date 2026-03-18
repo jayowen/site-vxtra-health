@@ -40,3 +40,7 @@ timeoutMs = 60000
 build = ["sh", "-c", "npm run build"]
 run = ["sh", "-c", "npm run start"]
 deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

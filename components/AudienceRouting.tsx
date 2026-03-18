@@ -19,10 +19,10 @@ export default function AudienceRouting() {
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
-                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80"
-                alt="Happy employees celebrating access to affordable employer-sponsored healthcare"
+                src="/audience-employees.png"
+                alt="Employees receiving care from local physicians with zero out-of-pocket costs"
                 width={600}
-                height={400}
+                height={450}
               />
             </div>
             <div className="audience-card-content">
@@ -34,7 +34,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Employees</h3>
               <p>
-                Local doctors who know your name, zero out-of-pocket costs, and no insurance runaround. See your physician, get care, skip the bill.
+                Local doctors who know your name. $0 copays, $0 deductibles, and no insurance runaround. Just great care.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
@@ -43,10 +43,10 @@ export default function AudienceRouting() {
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80"
-                alt="Physician steward consulting directly with a patient in a community health setting"
+                src="/audience-physicians.png"
+                alt="Physician partnering directly with local employers"
                 width={600}
-                height={400}
+                height={450}
               />
             </div>
             <div className="audience-card-content">
@@ -57,7 +57,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Physicians</h3>
               <p>
-                Practice medicine your way. Work directly with local employers, backed by tech that handles claims and data. Patients trust you &mdash; not a call center.
+                Practice medicine your way. Partner directly with employers, backed by tech that handles claims and data.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
@@ -66,10 +66,10 @@ export default function AudienceRouting() {
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80"
-                alt="Employer team reviewing transparent health plan data and cost savings"
+                src="/audience-employers.png"
+                alt="Employer reviewing transparent health plan cost data"
                 width={600}
-                height={400}
+                height={450}
               />
             </div>
             <div className="audience-card-content">
@@ -81,7 +81,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Employers</h3>
               <p>
-                Transparent data, local physicians, and costs you control. Better care for your people at hundreds less per employee per month.
+                Transparent data, local physicians, and costs you control. Better care at hundreds less per employee per month.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
@@ -90,10 +90,10 @@ export default function AudienceRouting() {
             <div className="audience-card-photo-wrapper">
               <Image
                 className="audience-card-photo"
-                src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=600&q=80"
-                alt="Benefits broker closing a deal with a differentiated self-insured health plan"
+                src="/audience-brokers.png"
+                alt="Broker presenting a differentiated health plan to clients"
                 width={600}
-                height={400}
+                height={450}
               />
             </div>
             <div className="audience-card-content">
@@ -107,7 +107,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Brokers</h3>
               <p>
-                A plan no competitor can match. Your clients save real money, your book of business stays protected, and renewals sell themselves.
+                A plan no competitor can match. Real savings for clients, a protected book of business, and easy renewals.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
