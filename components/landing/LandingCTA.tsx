@@ -29,7 +29,7 @@ export default function LandingCTA({
         <h2 className="section-title">{headline}</h2>
         <p className="final-cta-sub">{body}</p>
         <div className="final-cta-actions">
-          <a href={ctaPrimaryHref} className="btn-white-solid">
+          <a href={ctaPrimaryHref} className="btn-coral-solid">
             {ctaPrimary}
           </a>
           <a href={ctaSecondaryHref} className="btn btn-white-outline btn-lg">

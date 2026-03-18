@@ -21,7 +21,7 @@ export default function FinalCTA() {
           <div className="final-cta-actions">
             <a
               href="mailto:info@vxtrahealth.com?subject=Schedule%20a%20Call%20-%20Vxtra%20Health"
-              className="btn-white-solid"
+              className="btn-coral-solid"
             >
               Schedule a Call
             </a>

@@ -7,29 +7,33 @@
 <title>Vxtra Health — StartEngine Profile Plan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --teal: #22BAB4;
-  --teal-dark: #1a9e99;
-  --teal-light: #e6f7f6;
-  --coral: #E8734A;
+  --teal: #59b7b3;
+  --teal-dark: #266a65;
+  --teal-light: #eaf5f4;
+  --teal-medium: #488f8b;
+  --teal-darkest: #004c47;
+  --coral: #f36c3d;
   --coral-dark: #d45e36;
-  --coral-light: #fdf0ec;
+  --coral-light: #fef1ec;
   --ink: #1B2A3D;
   --ink-light: #2d3f55;
+  --ink-dark: #0f1c2e;
+  --teal-bright: #5fd4cf;
   --white: #ffffff;
   --off-white: #f8f9fa;
   --warm-white: #fdfcfb;
   --light-gray: #f1f3f5;
-  --mid-gray: #6c757d;
+  --mid-gray: #707070;
   --border: #dee2e6;
   --green: #28a745;
   --green-light: #e8f5e9;
   --amber: #f59e0b;
   --amber-light: #fff8e1;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Poppins', 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Poppins', 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --shadow-sm: 0 1px 3px rgba(27,42,61,0.08);
   --shadow-md: 0 4px 16px rgba(27,42,61,0.10);
   --shadow-lg: 0 8px 32px rgba(27,42,61,0.12);
@@ -41,8 +45,8 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: var(--off-white); }
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; line-height: 1.2; }
+body { font-family: var(--font-body); font-weight: 300; color: var(--ink); line-height: 1.6; background: var(--off-white); }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
 img { max-width: 100%; height: auto; }
 a { text-decoration: none; color: inherit; }
 
@@ -61,8 +65,8 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-.rec-badge-strategy { background: rgba(34,186,180,0.1); color: var(--teal-dark); border: 1px solid rgba(34,186,180,0.2); }
-.rec-badge-copy { background: rgba(232,115,74,0.1); color: var(--coral-dark); border: 1px solid rgba(232,115,74,0.2); }
+.rec-badge-strategy { background: rgba(89,183,179,0.1); color: var(--teal-dark); border: 1px solid rgba(89,183,179,0.2); }
+.rec-badge-copy { background: rgba(243,108,61,0.1); color: var(--coral-dark); border: 1px solid rgba(243,108,61,0.2); }
 .rec-badge-critical { background: rgba(220,53,69,0.1); color: #dc3545; border: 1px solid rgba(220,53,69,0.2); }
 .rec-badge-tip { background: rgba(40,167,69,0.1); color: var(--green); border: 1px solid rgba(40,167,69,0.2); }
 
@@ -102,7 +106,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── Document Header ─── */
 .doc-header {
-  background: linear-gradient(135deg, var(--ink) 0%, #0f1c2e 60%, #112233 100%);
+  background: linear-gradient(135deg, var(--teal-darkest) 0%, var(--ink) 60%, #0f1c2e 100%);
   padding: 60px 0 48px;
   position: relative;
   overflow: hidden;
@@ -115,7 +119,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-50%);
   width: 50%;
   height: 120%;
-  background: linear-gradient(135deg, rgba(34,186,180,0.12) 0%, rgba(34,186,180,0.04) 40%, rgba(232,115,74,0.06) 100%);
+  background: linear-gradient(135deg, rgba(89,183,179,0.12) 0%, rgba(89,183,179,0.04) 40%, rgba(243,108,61,0.06) 100%);
   border-radius: 40% 30% 40% 50%;
   filter: blur(60px);
 }
@@ -160,7 +164,7 @@ a { text-decoration: none; color: inherit; }
 }
 .doc-header h1 em {
   font-style: italic;
-  background: linear-gradient(135deg, var(--teal) 0%, #5fd4cf 50%, rgba(255,255,255,0.9) 100%);
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 50%, rgba(255,255,255,0.9) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -340,7 +344,7 @@ a { text-decoration: none; color: inherit; }
   gap: 0;
 }
 .se-hero-visual {
-  background: linear-gradient(135deg, var(--ink) 0%, #0f1c2e 100%);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-dark) 100%);
   padding: 48px 36px;
   display: flex;
   flex-direction: column;
@@ -358,14 +362,14 @@ a { text-decoration: none; color: inherit; }
   top: -20%;
   width: 60%;
   height: 80%;
-  background: radial-gradient(circle, rgba(34,186,180,0.15), transparent 60%);
+  background: radial-gradient(circle, rgba(89,183,179,0.15), transparent 60%);
 }
 .se-video-placeholder {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: rgba(34,186,180,0.15);
-  border: 2px solid rgba(34,186,180,0.3);
+  background: rgba(89,183,179,0.15);
+  border: 2px solid rgba(89,183,179,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,7 +462,7 @@ a { text-decoration: none; color: inherit; }
 .se-invest-btn:hover {
   background: var(--coral-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(232,115,74,0.3);
+  box-shadow: 0 4px 16px rgba(243,108,61,0.3);
 }
 .se-disclaimer {
   font-size: 11px;
@@ -509,7 +513,7 @@ a { text-decoration: none; color: inherit; }
 }
 .reason-item:hover {
   border-color: var(--teal);
-  box-shadow: 0 4px 16px rgba(34,186,180,0.08);
+  box-shadow: 0 4px 16px rgba(89,183,179,0.08);
   transform: translateX(4px);
 }
 .reason-num {
@@ -634,7 +638,7 @@ a { text-decoration: none; color: inherit; }
 }
 .perk-card:hover {
   border-color: var(--teal);
-  box-shadow: 0 4px 16px rgba(34,186,180,0.08);
+  box-shadow: 0 4px 16px rgba(89,183,179,0.08);
 }
 .perk-tier {
   background: var(--ink);
