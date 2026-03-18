@@ -2276,6 +2276,10 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
+.leadership-values {
+  background: var(--light-gray);
+}
+
 /* Leadership Page Grid */
 .leadership-grid {
   display: grid;
