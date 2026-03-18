@@ -1631,13 +1631,20 @@ a { text-decoration: none; color: inherit; }
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
   gap: 24px;
   margin-top: 56px;
+}
+
+.audience-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .audience-card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   transition: var(--transition);
   position: relative;
@@ -2635,6 +2642,10 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
   }
 
+  .audience-grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -2694,7 +2705,8 @@ a { text-decoration: none; color: inherit; }
   }
   .comp-cell { padding: 14px 20px; font-size: 14px; }
 
-  .audience-grid { grid-template-columns: 1fr; }
+  .audience-grid,
+  .audience-grid-4 { grid-template-columns: 1fr; }
 
   .problem-grid,
   .problem-grid-4,
