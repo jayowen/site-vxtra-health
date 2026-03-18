@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function EmployersPage() {
   return (
-    <main>
+    <main className="audience-employers">
       <LandingHero {...c.hero} />
       <LandingProblem {...c.problem} />
       <LandingGuide {...c.guide} />

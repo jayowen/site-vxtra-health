@@ -6,8 +6,9 @@ Multi-page marketing site for Vxtra Health, a physician-steward health plan targ
 ## Tech Stack
 - **Framework:** Next.js 15.0.8 (App Router)
 - **Styling:** Global CSS (`app/globals.css`) with Tailwind base utilities
-- **Fonts:** DM Serif Display (headings), Inter (body)
-- **Colors:** Teal (#22BAB4), Coral (#E8734A), Ink (#1B2A3D)
+- **Fonts:** Poppins Bold/SemiBold (headings), Poppins Light/Regular (body)
+- **Colors:** Coral (#f36c3d), Teal (#59b7b3), Teal Medium (#488f8b), Teal Dark (#266a65), Teal Darkest (#004c47), Ink (#1B2A3D)
+- **Audience accents:** Physicians=Coral, Employers=Teal, Employees=Teal Medium (via `.audience-*` class on `<main>`)
 - **Runtime:** Node.js 20, port 5000
 - **Package Manager:** npm
 - **ESLint:** v8 with eslint-config-next@15.0.8

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main>
-      <section className="inner-hero" style={{ background: "var(--ink)", minHeight: "320px" }}>
+      <section className="inner-hero" style={{ background: "linear-gradient(135deg, var(--teal-darkest) 0%, var(--ink) 100%)", minHeight: "320px" }}>
         <div className="inner-hero-content container">
           <div className="inner-hero-breadcrumb">
             <Link href="/">Home</Link>

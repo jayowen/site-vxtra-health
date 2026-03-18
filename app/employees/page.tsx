@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function EmployeesPage() {
   return (
-    <main>
+    <main className="audience-employees">
       <LandingHero {...c.hero} />
       <LandingProblem {...c.problem} />
       <LandingPlan {...c.plan} />
