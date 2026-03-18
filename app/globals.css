@@ -574,6 +574,37 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.3px;
 }
 
+/* Landing hero split layout */
+.landing-hero-visual {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-hero-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  border-radius: 24% 76% 40% 60% / 50% 30% 70% 50%;
+  overflow: hidden;
+}
+
+.landing-hero-img-wrap img {
+  object-fit: cover;
+}
+
+.landing-hero-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(15, 28, 46, 0.55) 75%, rgba(15, 28, 46, 0.9) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Hero visual */
 .hero-visual {
   position: relative;
@@ -2245,6 +2276,66 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
+/* Leadership Page Grid */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.leadership-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.leadership-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal);
+  transform: translateY(-4px);
+}
+
+.leadership-photo-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid var(--teal-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.leadership-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.leadership-card h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.leadership-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leadership-bio {
+  font-size: 15px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+  text-align: left;
+}
+
 /* About Mission Split Layout */
 .about-mission-grid {
   display: grid;
@@ -2697,6 +2788,7 @@ a { text-decoration: none; color: inherit; }
   }
 
   .about-leaders { grid-template-columns: 1fr; }
+  .leadership-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .resource-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
@@ -2748,6 +2840,9 @@ a { text-decoration: none; color: inherit; }
     border-radius: var(--radius) var(--radius) 0 0;
   }
   .comp-cell { padding: 14px 20px; font-size: 14px; }
+
+  .leadership-grid { grid-template-columns: 1fr; }
+  .leadership-card { padding: 32px 24px; }
 
   .audience-grid,
   .audience-grid-4 { grid-template-columns: 1fr; }

@@ -9,9 +9,11 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const aboutCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -22,10 +24,21 @@ export default function Nav() {
   const openDropdown = useCallback(() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setDropdownOpen(true);
+    setAboutDropdownOpen(false);
   }, []);
 
   const closeDropdown = useCallback(() => {
     closeTimer.current = setTimeout(() => setDropdownOpen(false), 200);
+  }, []);
+
+  const openAboutDropdown = useCallback(() => {
+    if (aboutCloseTimer.current) clearTimeout(aboutCloseTimer.current);
+    setAboutDropdownOpen(true);
+    setDropdownOpen(false);
+  }, []);
+
+  const closeAboutDropdown = useCallback(() => {
+    aboutCloseTimer.current = setTimeout(() => setAboutDropdownOpen(false), 200);
   }, []);
 
   const closeMobile = () => {
@@ -91,7 +104,7 @@ export default function Nav() {
                 }`}
                 aria-expanded={dropdownOpen}
                 aria-haspopup="true"
-                onClick={() => setDropdownOpen((o) => !o)}
+                onClick={() => { setDropdownOpen((o) => !o); setAboutDropdownOpen(false); }}
               >
                 Who We Help
                 <svg viewBox="0 0 12 8" width="10" height="7" aria-hidden="true" className={dropdownOpen ? "chevron-up" : ""}>
@@ -109,7 +122,33 @@ export default function Nav() {
                 <Link href="/employees" className={isActive("/employees") ? "active" : ""} onClick={() => setDropdownOpen(false)}>Employees</Link>
               </div>
             </li>
-            <li><Link href="/about" className={isActive("/about") ? "active" : ""}>About</Link></li>
+            <li
+              className="nav-dropdown"
+              onMouseEnter={openAboutDropdown}
+              onMouseLeave={closeAboutDropdown}
+            >
+              <button
+                className={`nav-dropdown-trigger${
+                  ["/about", "/about/leadership"].includes(pathname) ? " active" : ""
+                }`}
+                aria-expanded={aboutDropdownOpen}
+                aria-haspopup="true"
+                onClick={() => { setAboutDropdownOpen((o) => !o); setDropdownOpen(false); }}
+              >
+                About
+                <svg viewBox="0 0 12 8" width="10" height="7" aria-hidden="true" className={aboutDropdownOpen ? "chevron-up" : ""}>
+                  <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <div
+                className={`nav-dropdown-menu${aboutDropdownOpen ? " open" : ""}`}
+                onMouseEnter={openAboutDropdown}
+                onMouseLeave={closeAboutDropdown}
+              >
+                <Link href="/about" className={isActive("/about") ? "active" : ""} onClick={() => setAboutDropdownOpen(false)}>Our Story</Link>
+                <Link href="/about/leadership" className={isActive("/about/leadership") ? "active" : ""} onClick={() => setAboutDropdownOpen(false)}>Leadership</Link>
+              </div>
+            </li>
             <li><Link href="/resources" className={isActive("/resources") ? "active" : ""}>Resources</Link></li>
           </ul>
           <div className="nav-actions">
@@ -139,7 +178,9 @@ export default function Nav() {
         <Link href="/brokers" onClick={closeMobile} className="mobile-submenu-link">Brokers</Link>
         <Link href="/physicians" onClick={closeMobile} className="mobile-submenu-link">Physicians</Link>
         <Link href="/employees" onClick={closeMobile} className="mobile-submenu-link">Employees</Link>
-        <Link href="/about" onClick={closeMobile}>About</Link>
+        <span className="mobile-menu-label">About</span>
+        <Link href="/about" onClick={closeMobile} className="mobile-submenu-link">Our Story</Link>
+        <Link href="/about/leadership" onClick={closeMobile} className="mobile-submenu-link">Leadership</Link>
         <Link href="/resources" onClick={closeMobile}>Resources</Link>
         <div className="mobile-menu-actions">
           <Link href="/contact" className="btn btn-coral" onClick={closeMobile}>
