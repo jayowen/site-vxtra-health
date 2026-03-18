@@ -136,53 +136,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Advisory Board */}
-      <section className="section" style={{ background: "var(--light-gray)" }} aria-label="Advisory Board">
-        <div className="container">
-          <div className="reveal text-center">
-            <span className="section-label">Advisory Board</span>
-            <h2 className="section-title">Backed by the best.</h2>
-          </div>
-          <div className="authority-grid" style={{ marginTop: "48px" }}>
-            <div className="authority-card reveal">
-              <div className="authority-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                </svg>
-              </div>
-              <div>
-                <h3>John Rossman</h3>
-                <p>Board advisor and author of &ldquo;Think Like Amazon.&rdquo;</p>
-              </div>
-            </div>
-            <div className="authority-card reveal">
-              <div className="authority-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <div>
-                <h3>Tokyo Marine HCC</h3>
-                <p>Stop-loss reinsurance partner with $1.5M invested in Vxtra Health.</p>
-              </div>
-            </div>
-            <div className="authority-card reveal">
-              <div className="authority-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
-                  <rect x="9" y="9" width="6" height="6" />
-                </svg>
-              </div>
-              <div>
-                <h3>Capital Rx / JudyHealth</h3>
-                <p>Fortune 100 technology partner — medical &amp; Rx claims on one platform.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission - visual split */}
       <section className="section about-mission" aria-label="Mission">
         <div className="container">
