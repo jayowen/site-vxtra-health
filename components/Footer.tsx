@@ -13,6 +13,7 @@ export default function Footer() {
               width={120}
               height={32}
               className="footer-logo-img"
+              style={{ width: "auto", height: "auto" }}
             />
             <p className="footer-tagline">
               Physician-steward health plans for self-insured employers. Now
@@ -53,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; {new Date().getFullYear()} Vxtra Health. All rights reserved.</span>
+          <span suppressHydrationWarning>&copy; {new Date().getFullYear()} Vxtra Health. All rights reserved.</span>
           <span>
             <Link href="/privacy" style={{ color: "inherit" }}>Privacy Policy</Link>
             {" | "}

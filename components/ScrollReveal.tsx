@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,9 +32,27 @@ export default function ScrollReveal() {
       }
     );
 
-    reveals.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+    const observeAll = () => {
+      const reveals = document.querySelectorAll(".reveal:not(.visible)");
+      reveals.forEach((el) => observer.observe(el));
+    };
+
+    observeAll();
+
+    const mutationObserver = new MutationObserver(() => {
+      observeAll();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }

@@ -41,17 +41,13 @@ export default function Nav() {
     aboutCloseTimer.current = setTimeout(() => setAboutDropdownOpen(false), 200);
   }, []);
 
-  const closeMobile = () => {
-    setMobileOpen(false);
-    document.body.style.overflow = "";
-  };
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
-  const toggleMobile = () => {
-    setMobileOpen((prev) => {
-      document.body.style.overflow = !prev ? "hidden" : "";
-      return !prev;
-    });
-  };
+  const closeMobile = () => setMobileOpen(false);
+  const toggleMobile = () => setMobileOpen((prev) => !prev);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -72,6 +68,7 @@ export default function Nav() {
               height={72}
               priority
               className="nav-logo-img"
+              style={{ width: "auto", height: "72px" }}
             />
           </Link>
           <ul className="nav-links">
