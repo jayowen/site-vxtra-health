@@ -48,21 +48,18 @@ export default function ResourcesPage() {
       />
 
       {/* Header */}
-      <section className="hero landing-hero resources-hero" aria-label="Resources">
-        <div className="hero-bg-shape" />
-        <div className="container hero-inner landing-hero-inner">
-          <div className="hero-content">
-            <div className="hero-label">
-              <span /> Resources &amp; Guides
-            </div>
-            <h1>
-              Everything you need to <em>make an informed decision.</em>
-            </h1>
-            <p className="hero-sub">
-              Guides, frequently asked questions, and key statistics about physician-steward
-              health plans and the Vxtra Health model.
-            </p>
+      <section className="inner-hero" style={{ background: "linear-gradient(135deg, var(--ink) 0%, #0f1c2e 60%, #112233 100%)" }} aria-label="Resources">
+        <div className="inner-hero-content container">
+          <div className="hero-label" style={{ justifyContent: "center" }}>
+            <span /> Resources &amp; Guides
           </div>
+          <h1>
+            Everything you need to <em>make an informed decision.</em>
+          </h1>
+          <p className="inner-hero-sub">
+            Guides, frequently asked questions, and key statistics about physician-steward
+            health plans and the Vxtra Health model.
+          </p>
         </div>
       </section>
 
