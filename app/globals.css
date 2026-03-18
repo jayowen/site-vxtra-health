@@ -356,7 +356,7 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   background: linear-gradient(135deg, var(--ink) 0%, #0f1c2e 60%, #112233 100%);
   overflow: hidden;
-  padding: 100px 0 0;
+  padding: 140px 0 0;
 }
 
 .hero-bg-shape {
