@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vxtra Health — StartEngine Profile Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #22BAB4;
+  --teal-dark: #1a9e99;
+  --teal-light: #e6f7f6;
+  --coral: #E8734A;
+  --coral-dark: #d45e36;
+  --coral-light: #fdf0ec;
+  --ink: #1B2A3D;
+  --ink-light: #2d3f55;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --warm-white: #fdfcfb;
+  --light-gray: #f1f3f5;
+  --mid-gray: #6c757d;
+  --border: #dee2e6;
+  --green: #28a745;
+  --green-light: #e8f5e9;
+  --amber: #f59e0b;
+  --amber-light: #fff8e1;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --shadow-sm: 0 1px 3px rgba(27,42,61,0.08);
+  --shadow-md: 0 4px 16px rgba(27,42,61,0.10);
+  --shadow-lg: 0 8px 32px rgba(27,42,61,0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1200px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: var(--off-white); }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; line-height: 1.2; }
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* ─── Recommendation Badges ─── */
+.rec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.rec-badge-strategy { background: rgba(34,186,180,0.1); color: var(--teal-dark); border: 1px solid rgba(34,186,180,0.2); }
+.rec-badge-copy { background: rgba(232,115,74,0.1); color: var(--coral-dark); border: 1px solid rgba(232,115,74,0.2); }
+.rec-badge-critical { background: rgba(220,53,69,0.1); color: #dc3545; border: 1px solid rgba(220,53,69,0.2); }
+.rec-badge-tip { background: rgba(40,167,69,0.1); color: var(--green); border: 1px solid rgba(40,167,69,0.2); }
+
+/* ─── Recommendation Notes ─── */
+.rec-note {
+  margin: 16px 0;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1.7;
+  position: relative;
+}
+.rec-note::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+.rec-note-strategy { background: var(--teal-light); }
+.rec-note-strategy::before { background: var(--teal); }
+.rec-note-warning { background: var(--amber-light); }
+.rec-note-warning::before { background: var(--amber); }
+.rec-note-success { background: var(--green-light); }
+.rec-note-success::before { background: var(--green); }
+.rec-note strong { font-weight: 700; }
+.rec-note-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ─── Document Header ─── */
+.doc-header {
+  background: linear-gradient(135deg, var(--ink) 0%, #0f1c2e 60%, #112233 100%);
+  padding: 60px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 120%;
+  background: linear-gradient(135deg, rgba(34,186,180,0.12) 0%, rgba(34,186,180,0.04) 40%, rgba(232,115,74,0.06) 100%);
+  border-radius: 40% 30% 40% 50%;
+  filter: blur(60px);
+}
+.doc-header .container { position: relative; z-index: 2; }
+.doc-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.doc-logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.doc-logo-mark {
+  width: 40px;
+  height: 40px;
+  background: var(--teal);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--white);
+}
+.doc-prepared {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.doc-prepared strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+.doc-header h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.doc-header h1 em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--teal) 0%, #5fd4cf 50%, rgba(255,255,255,0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.doc-header-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ─── Quick Stats Bar ─── */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+.stats-bar-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.stat-item {
+  padding: 28px 24px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.stat-item:last-child { border-right: none; }
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--mid-gray);
+  font-weight: 500;
+}
+
+/* ─── Main Content ─── */
+.content { padding: 48px 0 80px; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+}
+
+/* ─── Sidebar Nav ─── */
+.sidebar { position: sticky; top: 24px; align-self: start; }
+.sidebar-nav {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.sidebar-nav-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  padding: 20px 24px 12px;
+}
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  border-left: 3px solid transparent;
+  transition: var(--transition);
+}
+.sidebar-nav a:hover {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border-left-color: var(--teal);
+}
+.sidebar-nav a .nav-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--light-gray);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--mid-gray);
+}
+.sidebar-nav a:hover .nav-num {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* ─── Sections ─── */
+.plan-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 24px;
+}
+
+.section-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-card-header {
+  padding: 32px 36px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.section-card-header h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 8px;
+}
+.section-card-header p {
+  font-size: 15px;
+  color: var(--mid-gray);
+  max-width: 700px;
+  line-height: 1.7;
+}
+.section-card-body { padding: 32px 36px; }
+
+/* ─── Mock StartEngine Profile ─── */
+.se-mock {
+  background: var(--light-gray);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin: 20px 0;
+}
+.se-mock-browser {
+  background: #e9ecef;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.se-mock-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ced4da;
+}
+.se-mock-dot:nth-child(1) { background: #ff6b6b; }
+.se-mock-dot:nth-child(2) { background: #ffd43b; }
+.se-mock-dot:nth-child(3) { background: #51cf66; }
+.se-mock-url {
+  flex: 1;
+  margin-left: 8px;
+  background: var(--white);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--mid-gray);
+}
+
+.se-mock-content {
+  padding: 0;
+  background: var(--white);
+}
+
+/* StartEngine Hero Mock */
+.se-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+}
+.se-hero-visual {
+  background: linear-gradient(135deg, var(--ink) 0%, #0f1c2e 100%);
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+.se-hero-visual::before {
+  content: '';
+  position: absolute;
+  right: -20%;
+  top: -20%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(34,186,180,0.15), transparent 60%);
+}
+.se-video-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(34,186,180,0.15);
+  border: 2px solid rgba(34,186,180,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.se-play-btn {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 32px solid var(--teal);
+  margin-left: 6px;
+}
+.se-hero-visual p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.se-hero-info {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.se-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-light);
+  color: var(--green);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.se-badge-live::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.se-hero-info h3 {
+  font-size: 24px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.se-hero-info .se-pitch {
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+}
+.se-raised {
+  margin-top: auto;
+}
+.se-raised-amount {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--teal-dark);
+}
+.se-raised-label {
+  font-size: 13px;
+  color: var(--mid-gray);
+  font-weight: 500;
+}
+.se-invest-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--coral);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 8px;
+}
+.se-invest-btn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(232,115,74,0.3);
+}
+.se-disclaimer {
+  font-size: 11px;
+  color: #adb5bd;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* SE Tabs */
+.se-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  padding: 0 32px;
+  gap: 0;
+}
+.se-tab {
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mid-gray);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.se-tab.active {
+  color: var(--teal-dark);
+  border-bottom-color: var(--teal);
+}
+
+/* ─── Reasons to Invest ─── */
+.reasons-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+.reason-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.reason-item:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 16px rgba(34,186,180,0.08);
+  transform: translateX(4px);
+}
+.reason-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.reason-content h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.reason-content p {
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+/* ─── Narrative Sections ─── */
+.narrative-block {
+  margin: 24px 0;
+  padding: 28px 32px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.narrative-block h3 {
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.narrative-block p {
+  font-size: 15px;
+  color: var(--ink-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.narrative-block p:last-child { margin-bottom: 0; }
+.narrative-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.narrative-block ul li {
+  padding: 8px 0 8px 24px;
+  font-size: 15px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  position: relative;
+}
+.narrative-block ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.narrative-block .highlight-stat {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+/* ─── Terms Table ─── */
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.term-card {
+  padding: 20px 24px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.term-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 4px;
+}
+.term-value {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--ink);
+}
+.term-note {
+  font-size: 12px;
+  color: var(--mid-gray);
+  margin-top: 4px;
+}
+
+/* ─── Perks Table ─── */
+.perks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.perk-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.perk-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 16px rgba(34,186,180,0.08);
+}
+.perk-tier {
+  background: var(--ink);
+  color: var(--white);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+}
+.perk-tier-name {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.perk-tier-amount {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--teal);
+}
+.perk-details {
+  padding: 20px 24px;
+  background: var(--white);
+}
+.perk-details p {
+  font-size: 14px;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+.perk-highlight {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ─── Team Section ─── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.team-card {
+  padding: 28px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.team-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.team-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.team-card-header h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.team-role {
+  font-size: 13px;
+  color: var(--teal-dark);
+  font-weight: 600;
+}
+.team-card p {
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+}
+
+/* ─── Updates Timeline ─── */
+.updates-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 28px;
+}
+.updates-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--coral));
+  border-radius: 2px;
+}
+.update-item {
+  position: relative;
+  padding: 16px 0 24px 20px;
+}
+.update-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--teal);
+}
+.update-timing {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.update-headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.update-desc {
+  font-size: 13px;
+  color: var(--mid-gray);
+  line-height: 1.5;
+}
+
+/* ─── FAQ Section ─── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-question {
+  padding: 18px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--off-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.faq-question::before {
+  content: 'Q';
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.faq-answer {
+  padding: 16px 24px 20px 64px;
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+/* ─── Do's and Don'ts ─── */
+.dos-donts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.dos-col, .donts-col {
+  padding: 24px;
+  border-radius: var(--radius);
+}
+.dos-col {
+  background: var(--green-light);
+  border: 1px solid rgba(40,167,69,0.2);
+}
+.donts-col {
+  background: #fde8e8;
+  border: 1px solid rgba(220,53,69,0.2);
+}
+.dos-col h4, .donts-col h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dos-col h4 { color: var(--green); }
+.donts-col h4 { color: #dc3545; }
+.dos-col ul, .donts-col ul {
+  list-style: none;
+  padding: 0;
+}
+.dos-col li, .donts-col li {
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+.dos-col li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+.donts-col li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* ─── Psychology Section ─── */
+.psych-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.psych-card {
+  padding: 24px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+}
+.psych-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal);
+}
+.psych-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.psych-card h4 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.psych-card p {
+  font-size: 13px;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+/* ─── Pitch Arc ─── */
+.pitch-arc {
+  display: flex;
+  gap: 0;
+  margin: 24px 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.pitch-step {
+  flex: 1;
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+  background: var(--white);
+  border-right: 1px solid var(--border);
+}
+.pitch-step:last-child { border-right: none; }
+.pitch-step::after {
+  content: '→';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--teal);
+  font-weight: 700;
+  z-index: 2;
+}
+.pitch-step:last-child::after { display: none; }
+.pitch-step-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.pitch-step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.pitch-step-hook {
+  font-size: 11px;
+  color: var(--mid-gray);
+  font-style: italic;
+}
+
+/* ─── Footer ─── */
+.doc-footer {
+  background: var(--ink);
+  padding: 40px 0;
+  text-align: center;
+}
+.doc-footer p {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.doc-footer strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .content-grid { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .se-hero { grid-template-columns: 1fr; }
+  .se-hero-visual { min-height: 200px; }
+  .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+  .terms-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .dos-donts { grid-template-columns: 1fr; }
+  .psych-grid { grid-template-columns: 1fr; }
+  .pitch-arc { flex-direction: column; }
+  .pitch-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .pitch-step::after { display: none; }
+  .perk-card { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     DOCUMENT HEADER
+     ═══════════════════════════════════════ -->
+<header class="doc-header">
+  <div class="container">
+    <div class="doc-header-top">
+      <div class="doc-logo">
+        <div class="doc-logo-mark">V</div>
+        Vxtra Health
+      </div>
+      <div class="doc-prepared">
+        Prepared by <strong>Business Builders</strong> &middot; March 10, 2026
+      </div>
+    </div>
+    <h1>StartEngine Profile<br><em>Messaging Plan</em></h1>
+    <p class="doc-header-sub">
+      A section-by-section blueprint for Vxtra Health's equity crowdfunding campaign on StartEngine — optimized based on analysis of top-performing campaigns that have collectively raised over $1B on the platform.
+    </p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     QUICK STATS BAR
+     ═══════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <div class="stat-value">$4.3T</div>
+      <div class="stat-label">U.S. Healthcare Market</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">85,000</div>
+      <div class="stat-label">Target Employers Nationally</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">$3.58B</div>
+      <div class="stat-label">Capital Rx Valuation</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">24</div>
+      <div class="stat-label">Markets Identified</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════ -->
+<main class="content">
+  <div class="container">
+    <div class="content-grid">
+
+      <!-- ─── Sidebar Nav ─── -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <div class="sidebar-nav-title">Profile Sections</div>
+          <a href="#strategy"><span class="nav-num">0</span> Strategy Overview</a>
+          <a href="#hero"><span class="nav-num">1</span> Hero Section</a>
+          <a href="#reasons"><span class="nav-num">2</span> Reasons to Invest</a>
+          <a href="#narrative"><span class="nav-num">3</span> Overview Narrative</a>
+          <a href="#team"><span class="nav-num">4</span> Team Bios</a>
+          <a href="#terms"><span class="nav-num">5</span> Terms</a>
+          <a href="#perks"><span class="nav-num">6</span> Perks &amp; Rewards</a>
+          <a href="#updates"><span class="nav-num">7</span> Update Cadence</a>
+          <a href="#faq"><span class="nav-num">8</span> FAQ</a>
+          <a href="#psychology"><span class="nav-num">9</span> Investor Psychology</a>
+          <a href="#rules"><span class="nav-num">10</span> Do's &amp; Don'ts</a>
+        </nav>
+      </aside>
+
+      <!-- ─── Main Sections ─── -->
+      <div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 0: STRATEGY OVERVIEW
+     ═══════════════════════════════════════ -->
+<section id="strategy" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-strategy">Strategy</span>
+      <h2>Strategic Positioning</h2>
+      <p>How Vxtra Health should be positioned on StartEngine to maximize investor interest and conversion.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Key Insight</span>
+        <strong>Every investor on StartEngine is a healthcare consumer.</strong> They've all experienced the pain of rising costs, confusing bills, and insurance bureaucracy. The villain (insurance companies) needs no introduction. This makes Vxtra's story immediately personal in a way a hardware gadget or consumer product never can be.
+      </div>
+
+      <div class="rec-note rec-note-success">
+        <span class="rec-note-label">Offering Type Recommendation</span>
+        <strong>Reg CF</strong> — Raise up to $5M, launch in 4-6 weeks, lower upfront costs. This aligns with the $3.5M private placement target for Q3 2026, but opens access to thousands of retail investors who become evangelists. StartEngine reports a <strong>90% success rate</strong> reaching minimum funding goals under Reg CF.
+      </div>
+
+      <div class="rec-note rec-note-warning">
+        <span class="rec-note-label">Timing Recommendation</span>
+        Launch the campaign to <strong>coincide with the July 2026 Augusta go-live</strong>. This means the campaign starts with real traction (employers committed, brokers active) and can deliver continuous updates as the first market generates data. The first 7-day claims data = first proof point = powerful update fuel.
+      </div>
+
+      <div class="rec-note rec-note-warning">
+        <span class="rec-note-label">Cigna Constraint — Critical</span>
+        Until mid-2027, Vxtra operates within the Cigna network in Augusta. All StartEngine copy must be <strong>pro-employer / pro-transparency</strong>, NOT anti-insurance. Use "traditional insurance" or "the old system" as the foil — never name specific carriers. The full anti-insurance positioning unlocks once proprietary networks are established.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1: HERO SECTION
+     ═══════════════════════════════════════ -->
+<section id="hero" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-copy">Recommended Copy</span>
+      <h2>Hero Section</h2>
+      <p>The first thing every investor sees. This must communicate the problem, the solution, and the opportunity in under 10 seconds.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Why This Works</span>
+        Top StartEngine campaigns lead with a bold headline, a 2-3 sentence pitch, and a prominent "Amount Raised" number. The hero section is the single highest-impact area — if investors don't connect here, they don't scroll. The amount raised updates in real-time and serves as live social proof.
+      </div>
+
+      <!-- StartEngine Mock -->
+      <div class="se-mock">
+        <div class="se-mock-browser">
+          <div class="se-mock-dot"></div>
+          <div class="se-mock-dot"></div>
+          <div class="se-mock-dot"></div>
+          <div class="se-mock-url">startengine.com/offering/vxtra-health</div>
+        </div>
+        <div class="se-mock-content">
+          <div class="se-hero">
+            <div class="se-hero-visual">
+              <div class="se-video-placeholder">
+                <div class="se-play-btn"></div>
+              </div>
+              <p>2-3 min founder-led pitch video</p>
+            </div>
+            <div class="se-hero-info">
+              <div class="se-badge-live">Live</div>
+              <h3>Health Insurance Costs Are Crushing American Businesses. We Built the Way Out.</h3>
+              <p class="se-pitch">
+                Americans spend $4.3 trillion on healthcare — and employers bear the heaviest burden, watching costs rise 7-10% every year with no end in sight. Vxtra Health is a physician-led health plan that connects self-funded employers with the best local doctors, powered by the same Fortune 100 technology used by Apple and General Motors. We deliver $0 copays, $0 deductibles, and real-time cost data — in a market of 85,000 employers desperate for a way out.
+              </p>
+              <div class="se-raised">
+                <div class="se-raised-amount">$[Amount] Raised</div>
+                <div class="se-raised-label">[X] Investors &middot; [X] days remaining</div>
+              </div>
+              <button class="se-invest-btn">Invest in Vxtra Health</button>
+              <p class="se-disclaimer">Investing involves risk. See offering circular before investing.</p>
+            </div>
+          </div>
+          <div class="se-tabs">
+            <div class="se-tab active">Overview</div>
+            <div class="se-tab">About</div>
+            <div class="se-tab">Terms</div>
+            <div class="se-tab">Updates</div>
+            <div class="se-tab">Rewards</div>
+            <div class="se-tab">Discussion</div>
+            <div class="se-tab">FAQ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Expanded "Show More" Text</span>
+        Founded by a serial entrepreneur who sold two previous companies at 22x and 15x earnings, Vxtra Health is launching its first market in Augusta, GA in July 2026, with 24 additional markets identified across the Southeast and Southwest. Our technology partner Capital Rx (valued at $3.58B, IPO planned for 2027) provides the infrastructure. Our reinsurance partner Tokyo Marine HCC has already invested $1.5M. Brokers in our first two markets are at 8/10 readiness. Now we're inviting investors to join before the first employer goes live.
+      </div>
+
+      <div class="rec-note rec-note-success">
+        <span class="rec-note-label">Video Script Structure (2-3 minutes)</span>
+        <strong>0:00-0:30 — The Problem:</strong> "I've spent 40 years in healthcare. The system is rigged against employers and their people."<br>
+        <strong>0:30-1:00 — The Insight:</strong> "Same treatment costs 40-70% more at a hospital. Insurance companies get 120-day-old data. We get it in 7 days."<br>
+        <strong>1:00-1:45 — The Model:</strong> Our Town model in plain language — aggregate employers, connect with local physicians, powered by Capital Rx.<br>
+        <strong>1:45-2:15 — Traction:</strong> Capital Rx partnership, Tokyo Marine investment, broker readiness, 24 markets identified.<br>
+        <strong>2:15-2:30 — The Ask:</strong> "We're raising capital to launch our first two markets. Invest in the company changing how 85,000 employers buy healthcare."
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2: REASONS TO INVEST
+     ═══════════════════════════════════════ -->
+<section id="reasons" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-critical">Most Critical Copy</span>
+      <h2>Reasons to Invest</h2>
+      <p>This bullet list appears at the top of the Overview tab and is the single highest-conversion copy block on any StartEngine page. Every top campaign nails this section.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Best Practice</span>
+        Each bullet follows the StartEngine formula: <strong>"Bold Metric/Claim:"</strong> + 1-2 sentences of context with specific numbers. Lead with the strongest credibility signal. Aim for 5-7 bullets. StartEngine's own campaign (which raised $28.3M) used exactly this structure.
+      </div>
+
+      <ul class="reasons-list">
+        <li class="reason-item">
+          <span class="reason-num">1</span>
+          <div class="reason-content">
+            <h4>Serial Entrepreneur Founder</h4>
+            <p>CEO Larry Hightower has sold two previous companies at 22x and 15x earnings, and grew a medical practice from 30 to 100 physicians — approximately 1.5% of all urologists in the United States.</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">2</span>
+          <div class="reason-content">
+            <h4>$3.58B Technology Partner</h4>
+            <p>Capital Rx, valued at $3.58B with an IPO planned for 2027, provides Vxtra with Fortune 100-level claims processing and prescription pricing — the same technology platform serving Apple and General Motors.</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">3</span>
+          <div class="reason-content">
+            <h4>$1.5M Strategic Investment from Tokyo Marine HCC</h4>
+            <p>One of the world's largest reinsurance companies has already invested $1.5M into Vxtra, validating the model and providing stop-loss coverage at rates individual employers can't access alone.</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">4</span>
+          <div class="reason-content">
+            <h4>$4.3 Trillion Market, 85,000 Target Employers</h4>
+            <p>Vxtra targets self-funded employers with 200-2,000 employees in secondary markets — a massive, underserved segment where every broker is selling the same overpriced products.</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">5</span>
+          <div class="reason-content">
+            <h4>$0 Copays, $0 Deductibles for Every Member</h4>
+            <p>The same treatment costs 40-70% less with independent physicians vs. hospital systems. Vxtra passes those savings directly to employees — a benefit that drives retention (68% of employees cite benefits as a top factor when leaving).</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">6</span>
+          <div class="reason-content">
+            <h4>24 Markets Identified for Expansion</h4>
+            <p>A replicable "Our Town" model across the Southeast and Southwest, each with a projected 5,000+ covered lives. Achieving full market penetration targets a $1B+ valuation.</p>
+          </div>
+        </li>
+        <li class="reason-item">
+          <span class="reason-num">7</span>
+          <div class="reason-content">
+            <h4>7-Day Data vs. 120-Day Industry Standard</h4>
+            <p>While traditional insurers give employers data 4 months late, Vxtra delivers real-time cost visibility in 7 days — the difference between guessing and managing.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3: OVERVIEW NARRATIVE
+     ═══════════════════════════════════════ -->
+<section id="narrative" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-copy">Recommended Copy</span>
+      <h2>Overview Tab — Narrative Sections</h2>
+      <p>The body of the Overview tab tells the full story. Each section has a bold H1 header and follows a problem → solution → proof arc. These scroll below the Reasons to Invest bullets.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="narrative-block">
+        <h3>The $4.3 Trillion Problem Nobody Has Fixed</h3>
+        <p>Every year, American employers watch their health insurance costs rise 7-10% — doubling over a decade. They pay more, their employees get less, and the data comes 120 days late. Meanwhile, insurance company stocks have appreciated <span class="highlight-stat">1,600% in eight years</span>. The system isn't broken — it's working exactly as insurance companies designed it. Just not for you.</p>
+        <p>The number of hospital administrators has grown <span class="highlight-stat">2,500% since 1999</span>, while physician pay has dropped 33%. Eight percent of people account for 80% of healthcare spending, yet nobody is coordinating their care. And 60% of brokers — the people employers trust to solve this — are now owned by private equity firms with no incentive to innovate.</p>
+        <p>Employers are trapped. They know the system doesn't work, but every option looks the same.</p>
+      </div>
+
+      <div class="narrative-block">
+        <h3>How Vxtra Health Works — The "Our Town" Model</h3>
+        <p>Vxtra Health aggregates self-funded employers within a community into a collective group — giving them the purchasing power and technology that were previously only available to Fortune 100 companies.</p>
+        <ul>
+          <li><strong>We identify a market.</strong> Secondary cities (population 50K-250K) where independent physicians thrive and everyone knows everyone. Augusta, GA is our first. Gainesville, GA is next.</li>
+          <li><strong>We connect employers with the best local physicians.</strong> Independent doctors deliver the same care at 40-70% less than hospital systems — and they actually want to practice medicine, not fight pre-authorization paperwork.</li>
+          <li><strong>We power it with Fortune 100 technology.</strong> Capital Rx's Judi platform is the first to process both prescription and medical claims on a single system. Employers get real-time data in 7 days.</li>
+          <li><strong>We back it with world-class reinsurance.</strong> Tokyo Marine HCC provides stop-loss coverage at group rates individual employers could never access.</li>
+        </ul>
+        <p>The result: employers get predictable, lower costs. Employees get $0 copays and $0 deductibles. Physicians get to practice medicine their way. And brokers get a product nobody else can offer.</p>
+      </div>
+
+      <div class="narrative-block">
+        <h3>Why Now — The Capital Rx Wave</h3>
+        <p>Our technology partner Capital Rx has gone from a $12.8M pre-money valuation to <span class="highlight-stat">$3.58B in six years</span>. They're processing claims for Fortune 100 companies including Apple and General Motors — and they're planning an IPO in 2027.</p>
+        <p>This creates a massive awareness wave. When the world's largest employers validate a technology platform, it removes the #1 objection for mid-market employers: "Can I trust this?"</p>
+        <p>Vxtra Health is the first company to bring Capital Rx's Fortune 100 technology to the self-funded employer market of 200-2,000 employees. We're riding the wake of a $3.58B company — and we're the only boat in the water.</p>
+      </div>
+
+      <div class="narrative-block">
+        <h3>The Expansion Playbook — 24 Markets and Growing</h3>
+        <p>Our "Our Town" model is designed to replicate. We've identified 24 markets across the Southeast and Southwest — each with the same characteristics as Augusta.</p>
+        <ul>
+          <li><strong>Phase 1 (2026):</strong> Augusta, GA launch — prove the model, collect data, build case studies</li>
+          <li><strong>Phase 2 (2027):</strong> Gainesville, GA — validate replication, begin proprietary network transition</li>
+          <li><strong>Phase 3 (2028+):</strong> Scale across identified markets toward 100,000+ covered lives</li>
+        </ul>
+        <p>Each market targeting 5,000+ covered lives creates compounding underwriting advantages. At full buildout, the model projects a <span class="highlight-stat">$1B+ valuation</span>.</p>
+      </div>
+
+      <div class="narrative-block">
+        <h3>Use of Funds</h3>
+        <ul>
+          <li><strong>Market Launch Operations</strong> — Employer onboarding, broker enablement, and care navigation infrastructure for Augusta (July 2026) and Gainesville (July 2027)</li>
+          <li><strong>Technology Integration</strong> — Capital Rx platform setup, employer portals, and real-time data dashboards</li>
+          <li><strong>Sales &amp; Marketing</strong> — Broker recruitment, employer outreach, educational content, and LinkedIn thought leadership</li>
+          <li><strong>Team Expansion</strong> — Care navigation staff, market development leads for Phase 2+ markets</li>
+          <li><strong>Working Capital</strong> — Operating runway through first renewal cycle (January 2027) when recurring revenue begins compounding</li>
+        </ul>
+      </div>
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Why This Narrative Structure Works</span>
+        Top campaigns (StartEngine's own $28.3M raise, Boxabl's $35M) follow the same arc: <strong>Problem → Model → Timing/Momentum → Expansion → Use of Funds</strong>. Each section builds on the last. The problem validates the need, the model shows the solution, timing creates urgency, expansion shows upside, and use of funds shows you have a plan. Never lead with the ask — lead with the story.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4: TEAM BIOS
+     ═══════════════════════════════════════ -->
+<section id="team" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-copy">Recommended Copy</span>
+      <h2>Team Section</h2>
+      <p>Investors invest in people first. The team section must tell a "why this team wins" story. Prior exits and industry credibility are the strongest signals.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">Best Practice</span>
+        Follow the StartEngine founder bio formula: <strong>"Before [current company], [Name] [most impressive prior achievement with scale metric]."</strong> Include professional headshots — campaigns without photos convert significantly lower.
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-card-header">
+            <div class="team-avatar">LH</div>
+            <div>
+              <h4>Larry Hightower</h4>
+              <div class="team-role">Co-Founder &amp; CEO</div>
+            </div>
+          </div>
+          <p>Before launching Vxtra Health, Larry spent 40+ years at the intersection of healthcare and finance. He grew a medical practice from 30 to 100 physicians — approximately 1.5% of all urologists in the United States — and sold two companies at 22x and 15x earnings. A self-described "recovering accountant," Larry has sat on both sides of the healthcare table: building physician practices and financing health plans. He has spent eight years developing the Vxtra model and identifying the 24-market expansion strategy.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-header">
+            <div class="team-avatar" style="background: var(--coral);">OPS</div>
+            <div>
+              <h4>Sandra / Andrew</h4>
+              <div class="team-role">Operations</div>
+            </div>
+          </div>
+          <p>30+ years of hands-on experience in health plan processing, claims administration, contract negotiation, and technical operations. Responsible for the operational backbone of Vxtra's launch — ensuring every claim processes, every employer is onboarded, and every employee gets the care navigation they need.</p>
+        </div>
+
+        <div class="team-card" style="grid-column: 1 / -1;">
+          <div class="team-card-header">
+            <div class="team-avatar" style="background: var(--ink-light);">ADV</div>
+            <div>
+              <h4>Advisory Board</h4>
+              <div class="team-role">Strategic Partners</div>
+            </div>
+          </div>
+          <p><strong>John Rossman</strong> — Author of <em>Think Like Amazon</em>, board advisor. Brings operational scaling expertise from the world's most customer-obsessed company.<br><br>
+          <strong>Capital Rx</strong> — $3.58B technology partner providing Fortune 100 claims processing infrastructure. IPO planned 2027.<br><br>
+          <strong>Tokyo Marine HCC</strong> — $1.5M strategic investor and stop-loss reinsurance partner. One of the world's largest reinsurance companies.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5: TERMS
+     ═══════════════════════════════════════ -->
+<section id="terms" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-strategy">Strategy</span>
+      <h2>Terms Recommendations</h2>
+      <p>The Terms tab is checked immediately by sophisticated investors. These recommendations should be finalized with securities counsel.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="terms-grid">
+        <div class="term-card">
+          <div class="term-label">Offering Type</div>
+          <div class="term-value">Reg CF (Equity)</div>
+          <div class="term-note">Fastest to market, up to $5M, 4-6 week launch</div>
+        </div>
+        <div class="term-card">
+          <div class="term-label">Min Investment</div>
+          <div class="term-value">$250 – $500</div>
+          <div class="term-note">Lower barrier = more investors = more social proof</div>
+        </div>
+        <div class="term-card">
+          <div class="term-label">Share Type</div>
+          <div class="term-value">Common Stock or SAFE</div>
+          <div class="term-note">SAFE is simpler for pre-revenue companies</div>
+        </div>
+        <div class="term-card">
+          <div class="term-label">Campaign Duration</div>
+          <div class="term-value">6 Months</div>
+          <div class="term-note">Gives time for Augusta go-live to generate traction updates</div>
+        </div>
+        <div class="term-card">
+          <div class="term-label">Valuation</div>
+          <div class="term-value">TBD w/ Counsel</div>
+          <div class="term-note">Pre-revenue: $10-30M pre-money typical; Tokyo Marine's $1.5M provides anchor</div>
+        </div>
+        <div class="term-card">
+          <div class="term-label">Funding Goal</div>
+          <div class="term-value">$1M – $5M</div>
+          <div class="term-note">Low minimum to hit "funded" quickly; max at Reg CF cap</div>
+        </div>
+      </div>
+
+      <div class="rec-note rec-note-warning" style="margin-top: 24px;">
+        <span class="rec-note-label">Important</span>
+        StartEngine reports 90% of offerings reach their minimum funding goal. Set the minimum low enough ($100K-$250K) to achieve "funded" status quickly — this triggers a psychological shift from "will it work?" to "how much will it raise?" Lower pre-money valuations grant larger equity percentages for the same dollar amount, which makes early investors feel they're getting better value.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6: PERKS & REWARDS
+     ═══════════════════════════════════════ -->
+<section id="perks" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-copy">Recommended Copy</span>
+      <h2>Perks &amp; Rewards Tiers</h2>
+      <p>Healthcare is personal. Every perk connects the investor to the mission, not just the financial return. The "Founding Investors" wall creates scarcity and identity.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="perks-grid">
+        <div class="perk-card">
+          <div class="perk-tier">
+            <div class="perk-tier-name">Supporter</div>
+            <div class="perk-tier-amount">$250+</div>
+          </div>
+          <div class="perk-details">
+            <p>Quarterly investor update newsletter + Vxtra Health branded item</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-tier">
+            <div class="perk-tier-name">Advocate</div>
+            <div class="perk-tier-amount">$1,000+</div>
+          </div>
+          <div class="perk-details">
+            <p>Everything above + invite to virtual "Meet the Founder" session with Larry Hightower</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-tier">
+            <div class="perk-tier-name">Partner</div>
+            <div class="perk-tier-amount">$5,000+</div>
+          </div>
+          <div class="perk-details">
+            <p>Everything above + early access to expansion market announcements</p>
+            <span class="perk-highlight">+ 10% Bonus Shares</span>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-tier">
+            <div class="perk-tier-name">Founding Investor</div>
+            <div class="perk-tier-amount">$10,000+</div>
+          </div>
+          <div class="perk-details">
+            <p>Everything above + annual call with Larry + name on the Vxtra "Founding Investors" wall (digital and physical in HQ)</p>
+            <span class="perk-highlight">+ 15% Bonus Shares</span>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-tier" style="background: linear-gradient(135deg, var(--ink), var(--teal-dark));">
+            <div class="perk-tier-name">Strategic Investor</div>
+            <div class="perk-tier-amount" style="color: var(--white);">$25,000+</div>
+          </div>
+          <div class="perk-details">
+            <p>Everything above + attend Augusta market launch event in person + advisory input on market expansion priorities</p>
+            <span class="perk-highlight">+ 20% Bonus Shares</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-note rec-note-strategy" style="margin-top: 24px;">
+        <span class="rec-note-label">Why These Work</span>
+        StartEngine data shows bonus shares are the #1 perk driver on the platform. Their own campaign offers 10% bonus for reservations, 10% for Owner's Bonus members, and 10% for $5K+ investments — stackable up to 20%. The "Founding Investors" wall creates identity and exclusivity — people want to say "I was one of the first." Physical event access (Augusta launch) converts at the highest tier because it makes the investment tangible.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7: UPDATE CADENCE
+     ═══════════════════════════════════════ -->
+<section id="updates" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-critical">Critical for Momentum</span>
+      <h2>Update Cadence Plan</h2>
+      <p>Updates are the #1 driver of ongoing investment momentum. StartEngine's own campaign posted 10+ updates in its final week alone. Campaigns that go silent hemorrhage momentum.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-warning">
+        <span class="rec-note-label">Key Rule</span>
+        <strong>Never go more than 2 weeks without an update</strong> during an active raise. Every update should include a specific number and a forward-looking statement. Update headlines function as micro-campaigns — they appear in investor inboxes and on the platform feed.
+      </div>
+
+      <div class="updates-timeline">
+        <div class="update-item">
+          <div class="update-timing">Launch Day</div>
+          <div class="update-headline">"We're Live. Vxtra Health Launches on StartEngine."</div>
+          <div class="update-desc">Announce the campaign, share the vision, set the tone</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Week 1</div>
+          <div class="update-headline">"[$X] Raised from [Y] Investors in Our First Week"</div>
+          <div class="update-desc">Momentum signal — specific numbers create FOMO</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Pre-Launch (June 2026)</div>
+          <div class="update-headline">"Augusta Launch in 30 Days: [X] Employers Committed, [Y] Covered Lives"</div>
+          <div class="update-desc">Real traction proof — letters of intent, broker activity</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Go-Live (July 1, 2026)</div>
+          <div class="update-headline">"Day One: Vxtra Health Goes Live in Augusta, GA"</div>
+          <div class="update-desc">The biggest milestone — first employers on the system</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Monthly (Ongoing)</div>
+          <div class="update-headline">"Month 1: [X] Claims Processed, [Y] Covered Lives, $[Z] Saved"</div>
+          <div class="update-desc">Real operating data — the proof investors need</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Partnership News</div>
+          <div class="update-headline">"Capital Rx Announces [Fortune 100 Client] — Validating Our Technology"</div>
+          <div class="update-desc">Borrowed credibility from Capital Rx's growing profile</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Expansion</div>
+          <div class="update-headline">"Market #2 Confirmed: Gainesville, GA Launch Date Set for July 2027"</div>
+          <div class="update-desc">Growth story — model replication is the valuation driver</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Social Proof</div>
+          <div class="update-headline">"[X] Investors Have Joined the Vxtra Movement"</div>
+          <div class="update-desc">Community momentum — investors become evangelists</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Capital Rx IPO (2027)</div>
+          <div class="update-headline">"Our Technology Partner Capital Rx Files for IPO"</div>
+          <div class="update-desc">Massive validation catalyst — the "wake" they're riding</div>
+        </div>
+        <div class="update-item">
+          <div class="update-timing">Case Study</div>
+          <div class="update-headline">"Augusta Employer Saves $[X] Per Employee in First 90 Days"</div>
+          <div class="update-desc">The ultimate proof point — real results from real employers</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8: FAQ
+     ═══════════════════════════════════════ -->
+<section id="faq" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-copy">Recommended Copy</span>
+      <h2>FAQ Section</h2>
+      <p>Proactively addresses the top investor objections. The FAQ tab is one of the most-checked sections on StartEngine. Unanswered questions erode trust.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">How does Vxtra Health make money?</div>
+          <div class="faq-answer">Vxtra earns revenue through administrative services fees (processing claims and managing data for employers), our Vxtra Care navigation service (a personal care concierge for employees), and risk margin on the aggregated employer pool. Revenue begins when the first employer goes live in July 2026.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Isn't this just another insurance company?</div>
+          <div class="faq-answer">No. Vxtra is NOT an insurance company. We're a health plan administrator for self-funded employers. The employers fund their own health plans — Vxtra provides the technology, physician network, care navigation, and group purchasing power that makes it work better and cost less. Catastrophic coverage is provided by Tokyo Marine HCC.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Why secondary markets? Why not launch in Atlanta or New York?</div>
+          <div class="faq-answer">In secondary markets (population 50K-250K), the dots are closer together. Everyone knows everyone. Independent physicians are a larger share of the market. Broker relationships are deeper. And there's less competition from venture-backed health tech companies chasing major metros. This is where our model has the highest probability of success — and where employers are most underserved.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What happens if an employee needs specialized care outside the local market?</div>
+          <div class="faq-answer">Employees can access specialized care anywhere. If someone needs Mayo Clinic, they go to Mayo Clinic. Vxtra's local physician network covers the vast majority of routine and specialty care — but we never restrict access to care a physician determines is necessary.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How is this different from a narrow network plan?</div>
+          <div class="faq-answer">Vxtra is the opposite of a narrow network. We start with the best local physicians — the doctors your employees already know — and add Fortune 100 technology and group purchasing power on top. It's a better network, not a smaller one.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What's the relationship with Capital Rx?</div>
+          <div class="faq-answer">Capital Rx is our technology partner. Their Judi platform is the first system to process both prescription and medical claims on a single platform. They're valued at $3.58B, serve Fortune 100 companies like Apple and General Motors, and plan to IPO in 2027. Vxtra is the first company bringing their technology to mid-market employers.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">When does Vxtra expect to generate revenue?</div>
+          <div class="faq-answer">Revenue begins July 1, 2026 when the first employers go live in Augusta, GA. We target 500 covered lives by October 2026 and 5,000+ covered lives by Q1 2027 across Augusta and Gainesville markets.</div>
+        </div>
+      </div>
+
+      <div class="rec-note rec-note-strategy" style="margin-top: 24px;">
+        <span class="rec-note-label">Discussion Tab Strategy</span>
+        Every investor question in the Discussion tab should get a founder response within 24 hours. Larry should personally answer at least 50% — his voice and experience are the product. Seed early questions from team/advisors to set the tone: "How did you identify the 24 expansion markets?", "How do physicians react when they hear about Vxtra?"
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9: INVESTOR PSYCHOLOGY
+     ═══════════════════════════════════════ -->
+<section id="psychology" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-strategy">Strategy</span>
+      <h2>Investor Psychology — Why Vxtra Wins</h2>
+      <p>Most successful StartEngine campaigns are consumer products. Vxtra is B2B — which normally underperforms. But Vxtra has a unique psychological advantage.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="rec-note rec-note-strategy">
+        <span class="rec-note-label">The Unfair Advantage</span>
+        <strong>Every investor is a healthcare consumer.</strong> Every one of them has dreaded opening a medical bill, fought with an insurance company, watched premiums rise, or heard a doctor complain about bureaucracy. The problem needs zero explanation. The villain is pre-established. The emotional hook is personal, not theoretical.
+      </div>
+
+      <h3 style="font-size: 20px; margin: 32px 0 20px;">Psychological Triggers to Leverage</h3>
+
+      <div class="psych-grid">
+        <div class="psych-card">
+          <div class="psych-icon">📊</div>
+          <h4>Social Proof</h4>
+          <p>Amount raised + investor count displayed prominently. "34,000 shareholders" and "600K community" drive the strongest conversions on StartEngine.</p>
+        </div>
+        <div class="psych-card">
+          <div class="psych-icon">⏰</div>
+          <h4>FOMO / Urgency</h4>
+          <p>"$2M raised in the last 24 hours." Countdown language, momentum metrics, and "invest before go-live" timing create urgency to act now.</p>
+        </div>
+        <div class="psych-card">
+          <div class="psych-icon">🏆</div>
+          <h4>Authority / Credibility</h4>
+          <p>Larry's 22x and 15x exits. Capital Rx serving Apple and GM. Tokyo Marine's $1.5M investment. "Think Like Amazon" advisor. Borrowed credibility stacks.</p>
+        </div>
+        <div class="psych-card">
+          <div class="psych-icon">📈</div>
+          <h4>Traction Metrics</h4>
+          <p>Revenue growth (once live), employer commitments, covered lives count, and YoY comparisons. Every claim backed by a specific number.</p>
+        </div>
+        <div class="psych-card">
+          <div class="psych-icon">🎁</div>
+          <h4>Bonus Share Incentives</h4>
+          <p>10-20% bonus shares at higher tiers. Stackable perks gamify the investment decision and reward conviction. #1 perk driver on the platform.</p>
+        </div>
+        <div class="psych-card">
+          <div class="psych-icon">💡</div>
+          <h4>Personal Connection</h4>
+          <p>Unlike hardware or food, healthcare is universal pain. Every investor IS the customer. "I've lived this problem" = instant emotional buy-in.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 20px; margin: 40px 0 20px;">The Pitch Arc — Investor Journey</h3>
+
+      <div class="pitch-arc">
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 1</div>
+          <div class="pitch-step-label">Validation</div>
+          <div class="pitch-step-hook">"You know the system is rigged"</div>
+        </div>
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 2</div>
+          <div class="pitch-step-label">Data</div>
+          <div class="pitch-step-hook">"Here's exactly how much it costs"</div>
+        </div>
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 3</div>
+          <div class="pitch-step-label">Credibility</div>
+          <div class="pitch-step-hook">"A 40-year veteran built the fix"</div>
+        </div>
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 4</div>
+          <div class="pitch-step-label">Authority</div>
+          <div class="pitch-step-hook">"Same tech Apple uses"</div>
+        </div>
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 5</div>
+          <div class="pitch-step-label">Upside</div>
+          <div class="pitch-step-hook">"24 markets, $1B+ target"</div>
+        </div>
+        <div class="pitch-step">
+          <div class="pitch-step-num">Step 6</div>
+          <div class="pitch-step-label">FOMO</div>
+          <div class="pitch-step-hook">"Invest before go-live"</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 10: DO'S & DON'TS
+     ═══════════════════════════════════════ -->
+<section id="rules" class="plan-section">
+  <div class="section-card">
+    <div class="section-card-header">
+      <span class="rec-badge rec-badge-critical">Critical Guidelines</span>
+      <h2>Messaging Do's &amp; Don'ts</h2>
+      <p>StartEngine-specific messaging rules that combine platform best practices with Vxtra's brand guidelines and the Cigna network constraint.</p>
+    </div>
+    <div class="section-card-body">
+
+      <div class="dos-donts">
+        <div class="dos-col">
+          <h4>&#10003; Do</h4>
+          <ul>
+            <li>Lead every section with a specific number ($4.3T, 85,000, 40-70%, 7 days vs. 120)</li>
+            <li>Use "physician" and "doctor" — never "provider"</li>
+            <li>Frame the investor as someone who experienced bad healthcare and can now fund the fix</li>
+            <li>Reference Capital Rx's Fortune 100 clients (Apple, GM) for borrowed credibility</li>
+            <li>Make the expansion playbook (24 markets) the growth and valuation story</li>
+            <li>Update frequently with real numbers from Augusta launch</li>
+            <li>Use Larry's exit track record (22x, 15x) in every credibility touchpoint</li>
+            <li>Answer every Discussion tab question within 24 hours</li>
+            <li>Use dollar amounts, not percentages ("$25/employee/month" over "25% savings")</li>
+          </ul>
+        </div>
+        <div class="donts-col">
+          <h4>&#10007; Don't</h4>
+          <ul>
+            <li>Don't name specific insurance companies (Cigna constraint until mid-2027) — use "traditional insurance" or "the old system"</li>
+            <li>Don't use jargon: no EOB, TPA, PBM, CPT, NADAC, stop-loss, or captive in investor-facing copy</li>
+            <li>Don't say "healthcare is broken" — say "how healthcare is paid for and administered isn't working"</li>
+            <li>Don't over-explain operational details — investors buy vision, not plumbing</li>
+            <li>Don't leave the Discussion tab unanswered for more than 24 hours</li>
+            <li>Don't skip updates — momentum perception is everything on StartEngine</li>
+            <li>Don't use high cognitive load sentences or insider baseball</li>
+            <li>Don't launch without a founder-led video — it's the #1 conversion driver</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      </div><!-- end main sections -->
+    </div><!-- end content-grid -->
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+<footer class="doc-footer">
+  <div class="container">
+    <p><strong>Vxtra Health — StartEngine Profile Messaging Plan</strong></p>
+    <p>Prepared by Business Builders &middot; March 10, 2026</p>
+    <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.3);">
+      Based on analysis of StartEngine's top-performing campaigns including StartEngine ($28.3M), Boxabl ($35M), and Flower Turbines ($16M), plus platform data from 1,000+ funding rounds totaling $1.2B raised.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

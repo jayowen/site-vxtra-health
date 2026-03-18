@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function GuideAuthority() {
   return (
     <section className="section guide" id="our-story" aria-label="Our story and authority">
@@ -8,18 +10,14 @@ export default function GuideAuthority() {
         </div>
 
         <div className="guide-quote reveal">
-          <div className="guide-photo-placeholder">
-            <svg viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
-              <path
-                d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
-                stroke="currentColor"
-                fill="none"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <circle cx="12" cy="7" r="4" stroke="currentColor" fill="none" strokeWidth="1.5" />
-            </svg>
-            <span>Photo Coming Soon</span>
+          <div className="guide-photo">
+            <Image
+              src="/larry-hightower.jpeg"
+              alt="Larry Hightower, Co-Founder and CEO of Vxtra Health"
+              width={160}
+              height={160}
+              className="guide-photo-img"
+            />
           </div>
           <div>
             <blockquote>
