@@ -81,12 +81,14 @@ export default function AboutPage() {
           </div>
 
           <div className="guide-quote reveal">
-            <div className="guide-photo-placeholder">
-              <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true" stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-              <span>Photo Coming Soon</span>
+            <div className="guide-photo">
+              <Image
+                src="/larry-hightower.jpeg"
+                alt="Larry Hightower, Co-Founder and CEO of Vxtra Health"
+                width={160}
+                height={160}
+                className="guide-photo-img"
+              />
             </div>
             <div>
               <blockquote>
@@ -97,42 +99,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="about-leaders reveal">
-            <div className="about-leader-card">
-              <div className="about-leader-photo-wrap">
-                <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
-                  alt="Professional executive portrait"
-                  width={120}
-                  height={120}
-                  className="about-leader-photo"
-                />
-              </div>
-              <h3>Larry Hightower</h3>
-              <p className="about-leader-role">Co-Founder &amp; CEO</p>
-              <p>
-                40+ years in healthcare and business operations. Sold companies at 22x and 15x
-                earnings. Grew a urology practice from 30 to 100 physicians.
-              </p>
-            </div>
-            <div className="about-leader-card">
-              <div className="about-leader-photo-wrap">
-                <Image
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80"
-                  alt="Healthcare operations professional"
-                  width={120}
-                  height={120}
-                  className="about-leader-photo"
-                />
-              </div>
-              <h3>Sandra &amp; Andrew</h3>
-              <p className="about-leader-role">Operations</p>
-              <p>
-                30+ years in health plan processing, claims, contracts, and sales. They know
-                exactly where the current system fails everyone involved.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
