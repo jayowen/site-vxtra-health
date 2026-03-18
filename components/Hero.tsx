@@ -151,7 +151,7 @@ export default function Hero() {
             </div>
             <div className="proof-text">
               <span className="proof-value">Southeast, South &amp; Midwest</span>
-              <span className="proof-label">Now Launching in Augusta &amp; Gainesville</span>
+              <span className="proof-label">Now Launching Across the Region</span>
             </div>
           </div>
         </div>

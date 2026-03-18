@@ -71,6 +71,12 @@ export default function ProblemCards() {
             </p>
           </div>
         </div>
+
+        <div className="problem-closing reveal">
+          <p>
+            Every year you wait, premiums climb another 7&ndash;10%. Insurance company stocks have risen 1,600% while your costs doubled. Your best people leave for employers who offer more &mdash; and non-compliance with federal transparency rules now carries real financial exposure.
+          </p>
+        </div>
       </div>
     </section>
   );

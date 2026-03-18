@@ -17,7 +17,7 @@ export default function OurTownModel() {
             purchasing power and coordinated care that national carriers can&rsquo;t match.
           </p>
           <p className="our-town-launch-note">
-            Now launching in Augusta &amp; Gainesville, GA.
+            Now launching across the Southeast, South, and Midwest.
           </p>
         </div>
 

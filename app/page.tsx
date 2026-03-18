@@ -4,8 +4,6 @@ import GuideAuthority from "@/components/GuideAuthority";
 import PlanSteps from "@/components/PlanSteps";
 import OurTownModel from "@/components/OurTownModel";
 import ComparisonTable from "@/components/ComparisonTable";
-import SuccessCards from "@/components/SuccessCards";
-import StakesRisks from "@/components/StakesRisks";
 import AudienceRouting from "@/components/AudienceRouting";
 import FinalCTA from "@/components/FinalCTA";
 export default function Home() {
@@ -17,8 +15,6 @@ export default function Home() {
       <PlanSteps />
       <OurTownModel />
       <ComparisonTable />
-      <SuccessCards />
-      <StakesRisks />
       <AudienceRouting />
       <FinalCTA />
     </main>

@@ -39,8 +39,8 @@ export default function PlanSteps() {
             <div className="step-number">2</div>
             <h3>Get a Custom Plan Design</h3>
             <p>
-              We design a plan around your workforce &mdash; $0 copays, $0
-              deductibles, and zero pre-authorization requirements.
+              We design a plan around your workforce &mdash; no deductibles, no
+              pre-authorizations, and zero insurance runaround.
             </p>
           </div>
           <div className="plan-step reveal">

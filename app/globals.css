@@ -861,6 +861,21 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
+.problem-closing {
+  margin-top: 48px;
+  padding: 28px 32px;
+  background: rgba(255,255,255,0.06);
+  border-left: 4px solid var(--coral);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.problem-closing p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
 /* ═══════════════════════════════════════
    4. GUIDE — EMPATHY + AUTHORITY
    ═══════════════════════════════════════ */

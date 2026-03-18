@@ -6,8 +6,6 @@ export default function ComparisonTable() {
     { bad: "Months-old data", good: "Transparent, real-time data" },
     { bad: "Misaligned incentives", good: "Physician-aligned care" },
     { bad: "7-10% annual increases", good: "Hundreds per employee per month in savings" },
-    { bad: "Employees avoid care", good: "Employees get care early" },
-    { bad: "Compliance risk from new mandates", good: "Full federal transparency compliance" },
   ];
 
   return (

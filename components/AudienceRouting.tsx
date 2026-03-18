@@ -7,10 +7,10 @@ export default function AudienceRouting() {
       <div className="container">
         <div className="reveal text-center">
           <span className="section-label">
-            Employees, Physicians, Employers &amp; Brokers
+            Your Transformation
           </span>
           <h2 className="section-title">
-            Built for everyone who touches the health plan.
+            What happens when healthcare works the way it should.
           </h2>
         </div>
 
@@ -34,7 +34,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Employees</h3>
               <p>
-                Local doctors who know your name. $0 copays, $0 deductibles, and no insurance runaround. Just great care.
+                Use your healthcare without dreading the bill. A real relationship with a local doctor who knows your name &mdash; care you actually use.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
@@ -57,7 +57,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Physicians</h3>
               <p>
-                Practice medicine your way. Partner directly with employers, backed by tech that handles claims and data.
+                Practice medicine the way you intended. No pre-authorizations, no insurance overrides &mdash; community-centered care backed by tech that handles claims and data.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
@@ -81,7 +81,7 @@ export default function AudienceRouting() {
               </div>
               <h3>For Employers</h3>
               <p>
-                Transparent data, local physicians, and costs you control. Better care at hundreds less per employee per month.
+                A health plan your company can finally be proud of. Predictable costs, transparent data you can show the board, and employees who stay.
               </p>
               <span className="audience-card-link">Learn More &rarr;</span>
             </div>
