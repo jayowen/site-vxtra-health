@@ -16,7 +16,7 @@ export const physiciansContent: LandingPageContent = {
     ctaPrimaryHref: "mailto:info@vxtrahealth.com?subject=Join the Network — Physician",
     ctaSecondary: "See How It Works",
     ctaSecondaryHref: "#how-it-works",
-    heroImage: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+    heroImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80",
     heroImageAlt: "Physician providing direct patient care without insurance barriers",
     proofBar: [
       { value: "30+ Years", label: "Physician-Led Experience", icon: "shield" },
