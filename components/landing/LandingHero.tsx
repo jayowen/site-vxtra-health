@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ProofBarItem } from "./types";
 
 function ProofIcon({ icon }: { icon: ProofBarItem["icon"] }) {
@@ -47,45 +48,40 @@ export default function LandingHero({
   heroImageAlt,
 }: LandingHeroProps) {
   return (
-    <section className="hero landing-hero" aria-label="Hero">
-      <div className="hero-bg-shape" />
-      <div className="hero-accent-dot" />
-      <div className="hero-accent-dot" />
-      <div className="hero-accent-dot" />
-      <div className={`container hero-inner ${heroImage ? "landing-hero-split" : "landing-hero-inner"}`}>
-        <div className="hero-content">
-          <div className="hero-label">
-            <span /> {label}
-          </div>
-          <h1>
-            {headline} <em>{headlineEmphasis}</em>
-          </h1>
-          <p className="hero-sub">{subhead}</p>
-          {urgency && <p className="hero-urgency">{urgency}</p>}
-          <div className="hero-actions">
-            <a href={ctaPrimaryHref} className="btn btn-coral btn-lg">
-              {ctaPrimary}
-            </a>
-            <a href={ctaSecondaryHref} className="btn btn-teal-outline btn-lg hero-btn-outline">
-              {ctaSecondary}
-            </a>
-          </div>
+    <section className="inner-hero" aria-label="Hero">
+      {heroImage && (
+        <div className="inner-hero-bg">
+          <Image
+            src={heroImage}
+            alt={heroImageAlt || ""}
+            fill
+            sizes="100vw"
+            priority
+          />
+          <div className="inner-hero-overlay" />
         </div>
-        {heroImage && (
-          <div className="landing-hero-visual">
-            <div className="landing-hero-img-wrap">
-              <Image
-                src={heroImage}
-                alt={heroImageAlt || ""}
-                fill
-                sizes="(max-width: 1024px) 100vw, 480px"
-                priority
-              />
-            </div>
-          </div>
-        )}
+      )}
+      <div className="container inner-hero-content">
+        <nav className="inner-hero-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/">Home</Link>
+          <span aria-hidden="true">/</span>
+          <span>{label}</span>
+        </nav>
+        <h1>
+          {headline} <em>{headlineEmphasis}</em>
+        </h1>
+        <p className="inner-hero-sub">{subhead}</p>
+        {urgency && <p className="inner-hero-urgency">{urgency}</p>}
+        <div className="inner-hero-actions">
+          <a href={ctaPrimaryHref} className="btn btn-coral btn-lg">
+            {ctaPrimary}
+          </a>
+          <a href={ctaSecondaryHref} className="btn btn-white-outline btn-lg">
+            {ctaSecondary}
+          </a>
+        </div>
       </div>
-      <div className="proof-bar">
+      <div className="inner-hero-proof">
         <div className="proof-bar-inner">
           {proofBar.map((item, i) => (
             <div className="proof-item" key={i}>
