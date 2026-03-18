@@ -10,7 +10,7 @@ export default function OurTownModel() {
         <div className="reveal text-center">
           <span className="section-label">The Our Town Model &amp; Methodology</span>
           <h2 className="section-title">
-            Secondary markets are the opportunity. Community is the advantage.
+            Secondary markets are the opportunity.<br /> Community is the advantage.
           </h2>
           <p className="section-subtitle section-subtitle-centered">
             Our methodology aggregates local employers and physicians &mdash; creating
