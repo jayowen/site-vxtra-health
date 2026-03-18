@@ -93,21 +93,17 @@ export default function GuideAuthority() {
           </div>
         </div>
 
-        <div className="video-placeholder reveal">
-          <div className="video-placeholder-inner">
-            <svg viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
-              <polygon
-                points="5 3 19 12 5 21 5 3"
-                fill="rgba(34,186,180,0.8)"
-                stroke="none"
-              />
-            </svg>
-            <h3>Our Story: Coming Soon</h3>
-            <p>
-              Why we started Vxtra Health and how we&rsquo;re changing healthcare for
-              employers who deserve better.
-            </p>
-          </div>
+        <div className="video-embed reveal">
+          <iframe
+            title="Vxtra Health — Our Story"
+            src="https://player.vimeo.com/video/1104193261?h=fd593b776e"
+            width="640"
+            height="360"
+            frameBorder="0"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>
