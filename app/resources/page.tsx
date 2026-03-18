@@ -48,7 +48,7 @@ export default function ResourcesPage() {
       />
 
       {/* Header */}
-      <section className="inner-hero" style={{ background: "linear-gradient(135deg, var(--teal-darkest) 0%, var(--ink) 60%, #0f1c2e 100%)" }} aria-label="Resources">
+      <section className="inner-hero" style={{ background: "linear-gradient(135deg, var(--teal-darkest) 0%, var(--ink) 60%, var(--ink-dark) 100%)" }} aria-label="Resources">
         <div className="inner-hero-content container">
           <div className="hero-label" style={{ justifyContent: "center" }}>
             <span /> Resources &amp; Guides
